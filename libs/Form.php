@@ -64,7 +64,7 @@ class Form
         return "<select name='$name' $attr>$lists</select>";
     }
 
-    static function getData($type, $index)
+    static function getData($type, $index, $table = false)
     {
         if(substr($type,0,7) == 'options')
         {
@@ -80,6 +80,7 @@ class Form
                 $data = $db->single($options,[
                     $obj_array[1] => $index
                 ]);
+                // if($table) return "<a href='".routeTo('crud/index',['table'=>$options])."'>".$data->{$obj_array[2]}."</a>";
                 return $data->{$obj_array[2]};
             }
         }

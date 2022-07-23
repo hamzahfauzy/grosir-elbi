@@ -53,7 +53,11 @@
                                                 if(is_array($field))
                                                 {
                                                     $label = $field['label'];
-                                                    $data_value = Form::getData($field['type'],$data->{$key});
+                                                    $data_value = Form::getData($field['type'],$data->{$key},true);
+                                                    if($field['type'] == 'number')
+                                                    {
+                                                        $data_value = number_format($data_value);
+                                                    }
                                                     $field = $key;
                                                 }
                                                 else
