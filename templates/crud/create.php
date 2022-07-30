@@ -41,6 +41,16 @@
                                     <?= Form::input($type, $table."[".$field."]", ['class'=>"form-control","placeholder"=>$label,"value"=>$old[$field]??'']) ?>
                                 </div>
                                 <?php endforeach ?>
+                                <?php if($table == 'suplier'): ?>
+                                <div class="form-group">
+                                    <label for="">Username</label>
+                                    <?= Form::input('text', "users[username]", ['class'=>"form-control","placeholder"=>'Username']) ?>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Password</label>
+                                    <?= Form::input('password', "users[password]", ['class'=>"form-control","placeholder"=>'Password']) ?>
+                                </div>
+                                <?php endif ?>
                                 <div class="form-group">
                                     <button class="btn btn-primary">Submit</button>
                                 </div>
