@@ -12,7 +12,7 @@ if(get_role($user->id)->name == 'suplier')
         }, $produk);
 
         return $db->all('pemesanan',[
-            'produk_id' => ['IN','('.implode($produk).')']
+            'produk_id' => ['IN','('.implode(',',$produk).')']
         ]);
     }
 
