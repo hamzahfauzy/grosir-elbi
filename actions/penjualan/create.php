@@ -23,6 +23,14 @@ if(request() == 'POST')
         'id' => $_POST[$table]['produk_id']
     ]);
 
+    if(get_role(auth()->user->id)->role_id == 3)
+    {
+        $pelanggan = $db->single('pelanggan',[
+            'user_id' => auth()->user->id
+        ]);
+        $_POST[$table]['pelanggan'] = $pelanggan->nama;
+    }
+
     $_POST[$table]['invoice'] = $invoice;
     $_POST[$table]['total']   = $_POST[$table]['jumlah']*$produk->harga;
     $time = str_replace('INV-','',$invoice);

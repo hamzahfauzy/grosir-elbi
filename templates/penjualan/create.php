@@ -34,6 +34,7 @@
                                         if(isset($field_data['type']))
                                         $type  = $field_data['type'];
                                     }
+                                    if($field == 'pelanggan' && get_role(auth()->user->id)->role_id == 3) continue;
                                     $label = _ucwords($label);
                                 ?>
                                 <div class="form-group">

@@ -47,6 +47,13 @@
                                 <input type="text" name="username" id="" class="form-control mb-2" placeholder="Nama Pengguna Disini...">
                                 <label for="">Kata Sandi</label>
                                 <input type="password" name="password" id="" class="form-control mb-2" placeholder="Kata Sandi Disini...">
+                                <label for="">Level</label>
+                                <select name="level" id="" class="form-control mb-2">
+                                    <option value="">- Pilih -</option>
+                                    <?php foreach($roles as $role): ?>
+                                    <option value="<?=$role->id?>"><?=$role->name?></option>
+                                    <?php endforeach ?>
+                                </select>
                                 <button class="btn btn-primary btn-block btn-round">Masuk</button>
                             </div>
                         </form>
