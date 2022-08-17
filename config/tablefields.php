@@ -16,7 +16,14 @@ return [
             'label' => 'Suplier',
             'type'  => 'options-obj:suplier,id,nama'
         ],
-        'kategori','satuan',
+        'kategori' => [
+            'label' => 'Kategori',
+            'type'  => 'options:Sembako|Kelontong|Barang Sehari-hari'
+        ],
+        'satuan' => [
+            'label' => 'Satuan',
+            'type'  => 'options:Liter|Kg|Kotak'
+        ],
         'biaya_pemesanan' => [
             'label' => 'Biaya Pemesanan',
             'type'  => 'number'

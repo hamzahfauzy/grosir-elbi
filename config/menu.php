@@ -7,7 +7,7 @@ return [
     'stok'       => 'crud/index?table=stok',
     'pelanggan'  => 'crud/index?table=pelanggan',
     'penjualan'  => 'penjualan/index',
-    'pemesanan'  => 'crud/index?table=pemesanan',
+    'pesanan'  => 'crud/index?table=pemesanan',
     'penggunaan' => 'penggunaan/index',
     // 'pengguna'  => [
     //     'semua pengguna' => 'users/index',

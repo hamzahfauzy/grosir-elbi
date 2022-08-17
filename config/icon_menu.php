@@ -7,7 +7,7 @@ return [
     'stok'       => 'fas fa-circle',
     'pelanggan'  => 'fas fa-circle',
     'penjualan'  => 'fas fa-circle',
-    'pemesanan'  => 'fas fa-circle',
+    'pesanan'  => 'fas fa-circle',
     'penggunaan' => 'fas fa-circle',
     // 'pengguna'  => 'fas fa-users',
     'pengaturan' => 'fas fa-cog'

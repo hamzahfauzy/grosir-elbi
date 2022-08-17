@@ -43,6 +43,16 @@ if(request() == 'POST')
         'invoice' => $invoice
     ]);
 
+    $stok = $db->single('stok',[
+        'produk_id' => $_POST[$table]['produk_id']
+    ]);
+
+    $db->update('stok',[
+        'jumlah' => $stok->jumlah - $_POST[$table]['jumlah']
+    ],[
+        'produk_id' => $_POST[$table]['produk_id']
+    ]);
+
     set_flash_msg(['success'=>$table.' berhasil ditambahkan']);
     header('location:'.routeTo('penjualan/index',['invoice'=>$invoice]));
 }
