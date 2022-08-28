@@ -21,7 +21,7 @@
                         <div class="card-header">
                             <div class="card-head-row">
                                 <div class="card-title">Hasil EOQ</div>
-                                <div class="card-tools">
+                                <!-- <div class="card-tools">
                                     <a href="#" class="btn btn-info btn-border btn-round btn-sm mr-2">
                                         <span class="btn-label">
                                             <i class="fa fa-pencil"></i>
@@ -34,7 +34,7 @@
                                         </span>
                                         Print
                                     </a>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <div class="card-body">

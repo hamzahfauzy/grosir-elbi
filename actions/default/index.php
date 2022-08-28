@@ -7,12 +7,14 @@ $db   = new Database($conn);
 
 $user = auth()->user;
 
-if(get_role($user->id)->name == 'kustomer')
+if(get_role($user->id)->name == 'kustomer' || get_role($user->id)->name == 'customer')
 {
     $data = $db->all('produk');
     $fields = config('fields')['produk'];
     unset($fields['biaya_pemesanan']);
     unset($fields['biaya_penyimpanan']);
+    unset($fields['suplier_id']);
+    unset($fields['jumlah_per_satuan']);
 
     return [
         'datas' => $data,

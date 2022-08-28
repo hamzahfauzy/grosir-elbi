@@ -2,12 +2,14 @@
 
 return [
     'dashboard'  => 'default/index',
+    'kategori'   => 'crud/index?table=kategori',
+    'satuan'     => 'crud/index?table=satuan',
     'suplier'    => 'crud/index?table=suplier',
     'produk'     => 'crud/index?table=produk',
     'stok'       => 'crud/index?table=stok',
-    'pelanggan'  => 'crud/index?table=pelanggan',
-    'penjualan'  => 'penjualan/index',
-    'pesanan'  => 'crud/index?table=pemesanan',
+    'konsumen'  => 'crud/index?table=pelanggan',
+    'pesanan dari konsumen'  => 'penjualan/index',
+    'supply barang'   => 'crud/index?table=pemesanan',
     'penggunaan' => 'penggunaan/index',
     // 'pengguna'  => [
     //     'semua pengguna' => 'users/index',

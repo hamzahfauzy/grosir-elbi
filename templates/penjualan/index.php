@@ -4,12 +4,12 @@
             <div class="page-inner py-5">
                 <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
                     <div>
-                        <h2 class="text-white pb-2 fw-bold"><?=_ucwords($table)?></h2>
-                        <h5 class="text-white op-7 mb-2">Memanajemen data <?=_ucwords($table)?></h5>
+                        <h2 class="text-white pb-2 fw-bold">Pembelian</h2>
+                        <h5 class="text-white op-7 mb-2">Memanajemen data Pembelian</h5>
                     </div>
                     <div class="ml-md-auto py-2 py-md-0">
                         <?php if(!isset($_GET['invoice'])): ?>
-                        <a href="<?=routeTo('penjualan/create')?>" class="btn btn-secondary btn-round">Buat <?=_ucwords($table)?></a>
+                        <a href="<?=routeTo('penjualan/create')?>" class="btn btn-secondary btn-round">Buat Pembelian</a>
                         <?php else: ?>
                         <a href="<?=routeTo('penjualan/create',['invoice'=>$_GET['invoice']])?>" class="btn btn-secondary btn-round">Tambah Item</a>
                         <?php endif ?>

@@ -1,8 +1,11 @@
 <?php
 
 return [
-    'tblname'    => [
-        'field1','field2'
+    'kategori'    => [
+        'nama'
+    ],
+    'satuan'    => [
+        'nama'
     ],
     'suplier' => [
         'nama','alamat','no_hp'
@@ -18,11 +21,11 @@ return [
         ],
         'kategori' => [
             'label' => 'Kategori',
-            'type'  => 'options:Sembako|Kelontong|Barang Sehari-hari'
+            'type'  => 'options-obj:kategori,nama,nama'
         ],
         'satuan' => [
             'label' => 'Satuan',
-            'type'  => 'options:Liter|Kg|Kotak'
+            'type'  => 'options-obj:satuan,nama,nama'
         ],
         'biaya_pemesanan' => [
             'label' => 'Biaya Pemesanan',

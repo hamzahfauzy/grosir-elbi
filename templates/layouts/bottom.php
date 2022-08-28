@@ -60,6 +60,7 @@
 	<script src="<?=$js?>"></script>
 	<?php endforeach ?>
 	<script>
+		<?php if((isset($_GET['table']) && $_GET['table'] == 'pemesanan') || get_route() == 'penjualan/index'): ?>
 		$('.datatable').dataTable({
 			dom: 'Bfrtip',
 			buttons: [
@@ -72,6 +73,16 @@
 				'colvis'
 			]
 		});
+		setTimeout(function(){
+			$('.buttons-print').addClass('btn btn-info btn-border btn-round btn-sm')
+			$('.buttons-print').html(`<span class="btn-label">
+                                            <i class="fa fa-print"></i>
+                                        </span>
+                                        Print`)
+		},500);
+		<?php else: ?>
+		$('.datatable').dataTable();
+		<?php endif ?>
 	</script>
 </body>
 </html>

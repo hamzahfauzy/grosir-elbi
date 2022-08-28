@@ -81,7 +81,9 @@ class Form
                     $obj_array[1] => $index
                 ]);
                 // if($table) return "<a href='".routeTo('crud/index',['table'=>$options])."'>".$data->{$obj_array[2]}."</a>";
-                return $data->{$obj_array[2]};
+                if($data)
+                    return $data->{$obj_array[2]};
+                return $index;
             }
         }
         return $index;
