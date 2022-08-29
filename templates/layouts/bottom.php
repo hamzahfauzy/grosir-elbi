@@ -83,6 +83,11 @@
 		<?php else: ?>
 		$('.datatable').dataTable();
 		<?php endif ?>
+
+		<?php if(isset($_GET['table']) && $_GET['table'] == 'pemesanan' && isset($_GET['produk_id'])): ?>
+			$("[name='pemesanan[produk_id]']").val(<?=$_GET['produk_id']?>).change()
+			$("[name='pemesanan[tanggal]']").val("<?=date('Y-m-d H:i')?>").change()
+		<?php endif ?>
 	</script>
 </body>
 </html>

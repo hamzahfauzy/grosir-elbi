@@ -58,7 +58,15 @@
                                         <td>
                                             <?=$index+1?>
                                         </td>
-                                        <td><?=$data->produk->nama?></td>
+                                        <td>
+                                            <?=$data->produk->nama?>
+                                            <?php 
+                                            $day_number = date('z');
+                                            if(get_role($user->id)->name == 'suplier' && $day_number%$data->jarak == 0): 
+                                            ?>
+                                            <a href="<?=routeTo('crud/create',['table'=>'pemesanan','produk_id'=>$data->produk->id])?>" class="btn btn-sm btn-success">Pesan</a>
+                                            <?php endif ?>
+                                        </td>
                                         <td><?=number_format($data->produk->biaya_pemesanan)?></td>
                                         <td><?=number_format($data->produk->biaya_penyimpanan)?></td>
                                         <td><?=number_format($data->jumlah)?></td>
